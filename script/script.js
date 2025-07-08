@@ -1,6 +1,6 @@
 $(document).ready(function () {
   let promoApplied = false;
-  const promoCode = "DISKON%0";
+  const promoCode = "DISKON50";
   const discountRate = 0.50;
 
   function updateProductSubtotal(product) {
@@ -55,7 +55,7 @@ $(document).ready(function () {
     let countEl = product.find('.count');
     countEl.text(parseInt(countEl.text()) + 1);
     updateProductSubtotal(product);
-    calculateTotal();
+    if (promoApplied) calculateTotal();
   });
 
   $('.decrease').click(function () {
@@ -65,7 +65,7 @@ $(document).ready(function () {
     if (count > 1) {
       countEl.text(count - 1);
       updateProductSubtotal(product);
-      calculateTotal();
+      if (promoApplied)calculateTotal();
     }
   });
 
@@ -73,10 +73,7 @@ $(document).ready(function () {
     e.preventDefault();
     const inputCode = $('input[name="promo"]').val().trim();
     promoApplied = (inputCode.toUpperCase() === promoCode);
-    if (promoApplied) {
-      alert("Promo code applied! 10% discount diberikan.");
-    }
-    calculateTotal();
+    if (promoApplied) calculateTotal();
   });
 
   $('#orderForm').on('reset', function () {
@@ -95,7 +92,6 @@ $(document).ready(function () {
     }, 100);
   });
 
-  // Inisialisasi base price dari isi awal
   $('.product').each(function () {
     const initialPrice = parseFloat($(this).find('.price').text().replace('$', ''));
     $(this).attr('data-base', (initialPrice / parseInt($(this).find('.count').text())).toFixed(2));

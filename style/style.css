@@ -1,15 +1,17 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #edfaee;
 }
 
 header {
-  background-color: #f0f0f0;
+  background-color: #edfaee;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-bottom: 3px solid green;
 }
 
 .brand {
@@ -47,9 +49,10 @@ header {
   grid-template-columns: 80px 1fr auto auto;
   align-items: center;
   gap: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid green;
   padding: 0.5rem;
   border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 }
 
 .qty {
@@ -65,9 +68,11 @@ header {
 }
 
 .order-summary {
-  border: 1px solid #ccc;
+  border: 1px solid green;
   padding: 1rem;
   border-radius: 10px;
+
+  box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
 }
 
 form input {
@@ -111,9 +116,8 @@ form input {
   padding: 4px;
 }
 
-/* Responsive */
+
 @media (max-width: 480px) {
-  /* Mobile */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -139,7 +143,6 @@ form input {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Tablet */
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -155,7 +158,6 @@ form input {
 }
 
 @media (min-width: 769px) {
-  /* Desktop */
   .grid-container {
     grid-template-columns: 2fr 1fr;
   }

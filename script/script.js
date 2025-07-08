@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let promoApplied = false;
-  const promoCode = "PAEDI10";
-  const discountRate = 0.10;
+  const promoCode = "DISKON%0";
+  const discountRate = 0.50;
 
   function updateProductSubtotal(product) {
     const qty = parseInt(product.find('.count').text());

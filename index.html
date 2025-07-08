@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toko Paedi</title>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+    <header>
+    <h1><span class="brand">TokoPaedi</span></h1>
+    <nav>
+        </header>
+
+  <main class="grid-container">
+    <section class="product-list">
+      <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Denmark Backpack" />
+        <div>
+          <h3>Denmark Backpack</h3>
+          <p>One-Size <span class="cream">Cream</span></p>
+        </div>
+        <div class="qty">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <div class="price">$20</div>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Casual Backpack" />
+        <div>
+          <h3>Casual Backpack</h3>
+          <p>One-Size <span class="black">Black</span></p>
+        </div>
+        <div class="qty">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <div class="price">$85</div>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Men Backpack" />
+        <div>
+          <h3>Men Backpack</h3>
+          <p>One-Size <span class="gray">Gray</span></p>
+        </div>
+        <div class="qty">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <div class="price">$150</div>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Women Backpack" />
+        <div>
+          <h3>Women Backpack</h3>
+          <p>One-Size <span class="pink">Pink</span></p>
+        </div>
+        <div class="qty">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <div class="price">$60</div>
+      </div>
+    </section>
+
+    <aside class="order-summary">
+      <h2>Order Summary</h2>
+      <form id="orderForm">
+        <input type="text" name="name" placeholder="Nama" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="promo" placeholder="Promo Code" />
+        <button type="reset" class="reset">Reset</button>
+        <button type="submit" class="apply">Apply</button>
+      </form>
+
+      <div class="total">
+  <h4>Rincian Pesanan:</h4>
+  <table id="orderItems" style="width: 100%; font-size: 0.9rem;">
+    <thead>
+      <tr>
+        <th style="text-align: left;">Produk</th>
+        <th>Qty</th>
+        <th style="text-align: right;">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <p>Total: $<span id="total">0</span></p>
+</div>
+
+
+<div id="orderItems" style="margin-top: 0.5rem;"></div>
+
+<div id="invoice" style="margin-top: 1rem;">
+  <p>Diskon: $<span id="discount">0</span></p>
+  <p><strong>Grand Total: $<span id="grandTotal">0</span></strong></p>
+</div>
+</aside>
+  </main>
+
+  <script src="./script/jquery-3.7.1.min.js"></script>
+  <script src="./script/script.js"></script>
+</body>
+</html>

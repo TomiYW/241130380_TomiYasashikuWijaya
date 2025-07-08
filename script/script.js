@@ -73,7 +73,10 @@ $(document).ready(function () {
     e.preventDefault();
     const inputCode = $('input[name="promo"]').val().trim();
     promoApplied = (inputCode.toUpperCase() === promoCode);
-    if (promoApplied) calculateTotal();
+    if (promoApplied) {
+      alert("Promo code applied! discount diberikan.");
+    }
+    calculateTotal();
   });
 
   $('#orderForm').on('reset', function () {

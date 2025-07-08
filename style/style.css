@@ -105,9 +105,10 @@ form input {
   font-size: 1.2rem;
 }
 
-p {
-  color: rgb(197, 195, 195);
+.para{
+  color: lightslategray;
 }
+
 
  th, td {
   border-bottom: 1px solid #ccc;
